@@ -5,11 +5,46 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
+    <title>Calcular Área do Quadrado</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <script type="text/javascript" src="calculo.js"></script>
 </head>
 
 <body>
-
+    <div class="container pt-4">
+        <h1>Calculadora de Área de Quadrado</h1>
+        <hr>
+        <p>Essa calcula a área de um quadrado baseado em sua medida de altura e base</p>
+        <br>
+        <p><b>Informe os campos abaixo, em seguida clique em"Calcular"</b></p>
+    </div>
+    <div class="container">
+        <form method="POST" name="calcForm" action="">
+            <table border="0">
+                <tr height="40px" class="text-center">
+                    <td width="220px">Medida de Altura:</td>
+                    <td>
+                        <input type="number" name="alturavalor" class="form-control form-control-lg">
+                    </td>
+                </tr>
+                <tr height="40px" class="text-center">
+                    <td>Medida da Base:</td>
+                    <td>
+                        <input type="number" name="basevalor" class="form-control form-control-lg">
+                    </td>
+                </tr>
+                <tr height="100px" class="text-center">
+                    <td>
+                        <h2>Resultado:</h2>
+                    </td>
+                    <td><input type="text" readonly name="resareatotal" class="form-control form-control-lg"></td>
+                </tr>
+                <tr>
+                    <td colspan="2" class="text-center"><input type="button" value="Calcular" class="btn btn-success btn-lg" onClick="calcular(document.calcForm)"></td>
+                </tr>
+            </table>
+        </form>
+    </div>
 </body>
 
 </html>
